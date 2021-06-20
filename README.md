@@ -1,26 +1,75 @@
-# Vite2.x + Vue3.x + TypeScript Starter
+# Vue 3 + Typescript + Vite
 
-[![Author](https://img.shields.io/badge/author-XPoet-orange.svg)](https://github.com/XPoet)
-[![License](https://img.shields.io/github/license/XPoet/vite-vue3-starter.svg)](https://github.com/XPoet/vite-vue3-starter/blob/master/LICENSE)
-[![Stars](https://img.shields.io/github/stars/XPoet/vite-vue3-starter)](https://github.com/XPoet/vite-vue3-starter)
-[![Deploy](https://github.com/XPoet/vite-vue3-starter/workflows/deploy/badge.svg)](https://github.com/XPoet/vite-vue3-starter/actions/workflows/deploy.yml)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-Airbnb-hotpink.svg)](https://github.com/lin-123/javascript)
+This template should help get you started developing with Vue 3 and Typescript in Vite.
 
-## 在线预览
+vite events.js:292 throw er；
+解决办法：
+node ./node_modules/esbuild/install.js
 
-https://vite-vue3-starter.xpoet.cn/
+# Vite + Vue3 + TypeScript + Element Plus + sass + ESLint + Prettier
 
-## 前端技术交流群
+修改 Vite 配置文件
 
-因群成员大于 200 人，需要您关注公众号《前端鼓励师》，添加作者微信，再由作者拉你进群~
+# 规范目录结构
 
-<img src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/FE-Cheerleaders/FEC-Card.76dbi8n1bkk0.png" width="80%" />
+├── publish/
+└── src/
+├── api/ // 接口文件
+├── assets/ // 静态资源目录
+├── common/ // 通用类库目录
+├── components/ // 公共组件目录
+├── router/ // 路由配置目录
+├── store/ // 状态管理目录
+├── style/ // 通用 CSS 目录
+├── utils/ // 工具函数目录
+├── views/ // 页面组件目录
+├── App.vue
+├── main.ts
+├── shims-vue.d.ts
+├── tests/ // 单元测试目录
+├── index.html
+├── tsconfig.json // TypeScript 配置文件
+├── vite.config.ts // Vite 配置文件
+└── package.json
 
+# 集成 UI 框架 Element Plus
 
-## 搭建教程
+# npm i sass -D 安装 sass
 
-1️⃣&nbsp;[掘金](https://juejin.cn/post/6951649464637636622)&emsp;2️⃣&nbsp;[XPoet's Blog](https://xpoet.cn/2021/04/%E4%BB%8E-0-%E5%BC%80%E5%A7%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%A6%E4%BD%A0%E6%90%AD%E5%BB%BA%E4%B8%80%E5%A5%97%E8%A7%84%E8%8C%83%E7%9A%84-Vue3.x-%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/)
+# 集成 EditorConfig 配置
 
+EditorConfig 有助于为不同 IDE 编辑器上处理同一项目的多个开发人员维护一致的编码风格。
+
+官网：editorconfig.org
+
+在项目根目录下增加 .editorconfig 文件：
+
+注意：
+VSCode 使用 EditorConfig 需要去插件市场下载插件 EditorConfig for VS Code 。
+JetBrains 系列（WebStorm、IntelliJ IDEA 等）则不用额外安装插件，可直接使用 EditorConfig 配置。
+
+# 集成 Prettier 配置
+
+npm i prettier -D
+
+配置 .prettierrc
+
+注意：
+VSCode 编辑器使用 Prettier 配置需要下载插件 Prettier - Code formatter 。
+JetBrains 系列编辑器（WebStorm、IntelliJ IDEA 等）则不用额外安装插件，可直接使用 Prettier 配置。
+
+# 集成 ESLint 配置
+
+VSCode 在 settings.json 设置文件中，增加以下代码：
+"editor.codeActionsOnSave": {
+"source.fixAll.eslint": true
+}
+
+# 集成 husky 和 lint-staged
+
+# 集成 Commitizen 实现规范提交 git cz 提交
+
+# 单元测试 jest
 
 ## 技术栈
 
@@ -62,5 +111,4 @@ npm run build
 
 ## 许可
 
-MIT Copyright © 2021 XPoet
-
+MIT Copyright © 2021 RyanLYC
