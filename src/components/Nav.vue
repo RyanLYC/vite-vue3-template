@@ -38,11 +38,6 @@ export default defineComponent({
           path: '/vuex'
         },
         {
-          name: 'Axios',
-          isActive: false,
-          path: '/axios'
-        },
-        {
           name: 'Test',
           isActive: false,
           path: '/test'
@@ -82,33 +77,30 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="stylus">
-
-@import "../style/basic.styl"
-
+<style scoped lang="scss">
 .nav {
-  position relative
-  width 100%
-  height 100%
-  box-sizing border-box
-  background: #fff
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: var(--menuBg);
+  color: var(--menuTextColor);
 
   .nav-list {
-
     .nav-item {
-      box-sizing border-box
-      width 100%
-      height 60px
-      cursor pointer
-
-      &.active {
-        font-weight bold
-        background $second-background-color
+      box-sizing: border-box;
+      width: 100%;
+      height: 60px;
+      cursor: pointer;
+      &:hover {
+        background: var(--menuHorizontalHoverBg);
       }
-
+      &.active {
+        font-weight: bold;
+        background: var(--menuHoverBg);
+        color: var(--menuActiveTextColor);
+      }
     }
-
   }
-
 }
 </style>

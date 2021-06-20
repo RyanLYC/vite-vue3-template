@@ -1,0 +1,16 @@
+/* 默认皮肤 */
+.base {
+  --menuBg: #fff;
+  --menuTextColor: #586686;
+  --menuActiveTextColor: #586686;
+  --menuHorizontalHoverBg: linear-gradient(360deg, #fdfeff 0%, #d0e9ff 100%);
+  --menuHoverBg: #1394ff;
+}
+/* 黑色皮肤 */
+.black {
+  --menuBg: black;
+  --menuTextColor: #fff;
+  --menuActiveTextColor: #ffd04b;
+  --menuHorizontalHoverBg: #666;
+  --menuHoverBg: #ccc;
+}

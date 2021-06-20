@@ -16,7 +16,8 @@ export default defineConfig({
           esModule: true,
           ensureStyleFile: true,
           resolveStyle: (name) => {
-            return `element-plus/lib/theme-chalk/${name}.css`
+            name = name.slice(3)
+            return `element-plus/packages/theme-chalk/src/${name}.scss`
           },
           resolveComponent: (name) => {
             return `element-plus/lib/${name}`
@@ -32,7 +33,7 @@ export default defineConfig({
   },
   base: './', // 设置打包路径
   server: {
-    port: 4500, // 设置服务启动端口号
+    port: 3500, // 设置服务启动端口号
     open: true, // 设置服务启动时是否自动打开浏览器
     cors: true // 允许跨域
 

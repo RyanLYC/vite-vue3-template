@@ -1,50 +1,98 @@
 <template>
   <div class="header">
     <div class="title" @click="router.push('/')">
-      Vite2.x + Vue3.x + TypeScript Starter
+      Vite2.x + Vue3.x + TypeScript Template
+    </div>
+    <div>
+      <el-dropdown trigger="click">
+        <span style="cursor: pointer">
+          皮肤
+          <i class="el-icon-arrow-down el-icon--right"></i>
+        </span>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item
+              v-for="(color, index) in themes"
+              :key="index"
+              @click="selectStyle(color)"
+            >
+              {{ color.label }}
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
     </div>
     <div class="go-github" @click="goGitHub">
-      <i class="icon el-icon-s-promotion"></i> GitHub
+      <i class="icon el-icon-s-promotion"></i>
+      GitHub
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
 import { useRouter } from 'vue-router'
+export default {
+  name: 'Header',
+  setup() {
+    const router = useRouter()
 
-// eslint-disable-next-line no-unused-vars
-const router = useRouter()
+    const goGitHub = () => {
+      window.open('https://github.com/RyanLYC/vite-vue3-template')
+    }
 
-// eslint-disable-next-line no-unused-vars
-const goGitHub = () => {
-  window.open('https://github.com/XPoet/vite-vue3-starter')
+    const themes = [
+      {
+        label: '默认',
+        value: 'base'
+      },
+      {
+        label: '黑色',
+        value: 'black'
+      }
+    ]
+    let htmlElement: any = document.querySelector('html')
+    htmlElement.setAttribute(
+      'class',
+      localStorage.getItem('zg-style') || 'base'
+    )
+    const selectStyle = (color: { label: string; value: string }) => {
+      localStorage.setItem('zg-style', color.value)
+      htmlElement.setAttribute('class', color.value)
+    }
+
+    return {
+      themes,
+      router,
+      goGitHub,
+      selectStyle
+    }
+  }
 }
 </script>
 
-<style scoped lang="stylus">
-
+<style scoped lang="scss">
 .header {
-  width 100%
-  height 100%
-  background #fff
-  display flex
-  justify-content space-between
-  align-items center
-  padding 0 20px
-  box-sizing border-box
-  font-weight bold
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-weight: bold;
 
   .title {
-    font-size 20px
-    cursor pointer
+    font-size: 20px;
+    cursor: pointer;
   }
 
   .go-github {
-    cursor pointer
-    font-size 16px
+    cursor: pointer;
+    font-size: 16px;
 
     .icon {
-      font-size 20px
+      font-size: 20px;
     }
   }
 }
