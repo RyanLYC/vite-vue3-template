@@ -21,10 +21,10 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="stylus">
+<style scoped lang="scss">
 button {
-  cursor pointer
-  font-size 20px
-  padding 5px
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
 }
 </style>
