@@ -1,7 +1,8 @@
 <template>
   <div class="header">
     <div class="title" @click="router.push('/')">
-      Vite2.x + Vue3.x + TypeScript Template
+      # Vite + Vue3 + TypeScript + Element Plus + SASS + ESLint + Prettier +
+      支持 jsx 支持setup 语法糖
     </div>
     <div>
       <el-dropdown trigger="click">
@@ -31,6 +32,7 @@
 
 <script lang="ts">
 import { useRouter } from 'vue-router'
+
 export default {
   name: 'Header',
   setup() {
@@ -50,7 +52,7 @@ export default {
         value: 'black'
       }
     ]
-    let htmlElement: any = document.querySelector('html')
+    const htmlElement: any = document.querySelector('html')
     htmlElement.setAttribute(
       'class',
       localStorage.getItem('zg-style') || 'base'

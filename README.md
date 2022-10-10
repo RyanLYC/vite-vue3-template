@@ -1,12 +1,4 @@
-# Vue 3 + Typescript + Vite
-
-This template should help get you started developing with Vue 3 and Typescript in Vite.
-
-vite events.js:292 throw er；
-解决办法：
-node ./node_modules/esbuild/install.js
-
-# Vite + Vue3 + TypeScript + Element Plus + sass + ESLint + Prettier
+# Vite + Vue3 + TypeScript + Element Plus + SASS + ESLint + Prettier + 支持 jsx  支持setup 语法糖
 
 修改 Vite 配置文件
 

@@ -1,13 +1,14 @@
 import { createApp } from 'vue'
-import importUiFramework from '@/utils/import-ui-framework'
+import ElementPlus from 'element-plus'
 import router from '@/router/index'
 import { key, store } from '@/store'
 import App from './App.vue'
-
-import 'element-plus/packages/theme-chalk/src/base.scss'
+import 'element-plus/dist/index.css'
 
 import '@/styles/base.css'
 import '@/styles/globalColor.scss'
 
 const app = createApp(App)
-importUiFramework(app).use(router).use(store, key).mount('#app')
+app.use(ElementPlus)
+app.use(router)
+app.use(store, key).mount('#app')

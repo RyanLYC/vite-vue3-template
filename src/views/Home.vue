@@ -5,7 +5,11 @@
       alt="Vue logo"
       src="../assets/logo.png"
     />
-    <div class="page-title">Vite2.x + Vue3.x + TypeScript + Element Plus</div>
+    <div class="page-title">
+      # Vite + Vue3 + TypeScript + Element Plus + SASS + ESLint + Prettier +
+      支持 jsx 支持setup 语法糖
+    </div>
+    <el-button type="primary">el-btn</el-button>
   </div>
 </template>
 
