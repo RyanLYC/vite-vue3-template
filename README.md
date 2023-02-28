@@ -1,28 +1,30 @@
+# 重新搞了个 https://github.com/RyanLYC/vue3-template
+
 # Vite + Vue3 + TypeScript + Element Plus + SASS + ESLint + Prettier + 支持 jsx  支持setup 语法糖
 
 修改 Vite 配置文件
 
 # 规范目录结构
 
-├── publish/
-└── src/
-├── api/ // 接口文件
-├── assets/ // 静态资源目录
-├── common/ // 通用类库目录
-├── components/ // 公共组件目录
-├── router/ // 路由配置目录
-├── store/ // 状态管理目录
-├── style/ // 通用 CSS 目录
-├── utils/ // 工具函数目录
-├── views/ // 页面组件目录
-├── App.vue
-├── main.ts
-├── shims-vue.d.ts
-├── tests/ // 单元测试目录
-├── index.html
-├── tsconfig.json // TypeScript 配置文件
-├── vite.config.ts // Vite 配置文件
-└── package.json
+├── publish/  
+└── src/  
+├── api/ // 接口文件  
+├── assets/ // 静态资源目录  
+├── common/ // 通用类库目录  
+├── components/ // 公共组件目录  
+├── router/ // 路由配置目录  
+├── store/ // 状态管理目录  
+├── style/ // 通用 CSS 目录  
+├── utils/ // 工具函数目录  
+├── views/ // 页面组件目录  
+├── App.vue  
+├── main.ts  
+├── shims-vue.d.ts  
+├── tests/ // 单元测试目录  
+├── index.html  
+├── tsconfig.json // TypeScript 配置文件  
+├── vite.config.ts // Vite 配置文件  
+└── package.json  
 
 # 集成 UI 框架 Element Plus
 
@@ -65,9 +67,9 @@ VSCode 在 settings.json 设置文件中，增加以下代码：
 
 ## 技术栈
 
-- 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)
-- 构建工具：[Vite 2.x](https://cn.vitejs.dev/)
-- 前端框架：[Vue 3.x](https://v3.cn.vuejs.org/)
+- 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)  
+- 构建工具：[Vite 2.x](https://cn.vitejs.dev/)  
+- 前端框架：[Vue 3.x](https://v3.cn.vuejs.org/)  
 - 路由工具：[Vue Router 4.x](https://next.router.vuejs.org/zh/index.html)
 - 状态管理：[Vuex 4.x](https://next.vuex.vuejs.org/)
 - UI 框架：[Element Plus](https://element-plus.org/#/zh-CN)
